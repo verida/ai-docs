@@ -4,7 +4,11 @@ icon: plug
 
 # Connectors
 
-Users can connect multiple data sources to their Verida account via the [Verida Vault](../resources/verida-vault.md). Data is syncronized on demand and stored to the user's encrypted databases on the [Verida Network](https://www.verida.network/).
+Users can connect multiple data sources to their Verida account via the [Verida Vault](../../resources/verida-vault.md). Data is syncronized on demand and stored to the user's encrypted databases on the [Verida Network](https://www.verida.network/).
+
+{% hint style="info" %}
+Looking to build your own connector? See our [Build a Connector](build-a-connector.md) getting started guide.
+{% endhint %}
 
 ## Supported Connectors
 
@@ -33,7 +37,7 @@ Users can connect multiple data sources to their Verida account via the [Verida 
 4. Fireflies
 5. Spotify
 
-{% hint style="info" %}
+{% hint style="success" %}
 You can view a list of completed, in progress and planned connectors in the [Connectors Roadmap](https://roadmap.verida.ai/)
 {% endhint %}
 

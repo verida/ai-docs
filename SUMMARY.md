@@ -8,7 +8,8 @@
 * [Authentication](getting-started/authentication.md)
 * [Scopes](getting-started/scopes.md)
 * [API Requests](getting-started/api-requests.md)
-* [Connectors](getting-started/connectors.md)
+* [Connectors](getting-started/connectors/README.md)
+  * [Build a Connector](getting-started/connectors/build-a-connector.md)
 * [Example Apps](getting-started/example-apps.md)
 
 ## Data APIs

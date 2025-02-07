@@ -1,6 +1,6 @@
 ---
-description: Get started by building a new API Connector
 icon: pencil
+description: Get started by building a new API Connector
 ---
 
 # Build a Connector
@@ -15,6 +15,30 @@ Key terms:
 2. **Connection:** A specific connection that a user has made with a provider. Connections are stored in a user's Verida Vault.
 3. **Handler:** Providers have multiple handlers (ie: the `google` provider has handlers `gmail`, `youtube`) that manage specific configuration options and performs the necessary syncronization
 4. **Schema:** Syncronized data must be mapped to a relevant schema, for instance the [Gmail handler](https://github.com/verida/data-connector-server/blob/main/src/providers/google/gmail.ts) syncronizes data to the [Email schema](https://common.schemas.verida.io/social/email/v0.1.0/schema.json). The [serverconfig.example.json](https://github.com/verida/data-connector-server/blob/main/src/serverconfig.example.json#L26) file lists the standard schemas.
+
+## Getting Setup
+
+You will need to first setup your environment by running the [Data Connector Server](https://github.com/verida/data-connector-server) on your local machine:
+
+```bash
+git clone https://github.com/verida/data-connector-server.git
+cd data-connector-server
+yarn
+cp serverconfig.example.json serverconfig.local.json
+```
+
+You will need to update your local configuration variables:
+
+* **accessCheckEnabled:** false
+* **testVeridaKey:** Create a new Verida account using the Verida Wallet
+
+And then start the server:
+
+```bash
+yarn run dev
+```
+
+You can now open the developer admin interface at [https://localhost:5021/](https://localhost:5021/).
 
 ## Basic Structure
 

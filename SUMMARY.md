@@ -15,6 +15,7 @@
 ## Data APIs
 
 * [Overview](data-apis/overview.md)
+* [Data Types](data-apis/data-types.md)
 * [Queries](data-apis/queries.md)
 * [Search](data-apis/search.md)
 * [AI Prompts](data-apis/ai-prompts.md)

@@ -267,10 +267,10 @@ Examples:
   [https://api.verida.ai/api/rest/v1/auth/scopes](https://api.verida.ai/api/rest/v1/auth/scopes)\
   Fetch a real-time list of valid scopes, including new or updated scopes.
 * **Developer Console**:\
-  [https://admin.verida.ai/](scopes.md#scope-types)\
+  [https://admin.verida.ai](https://admin.verida.ai)\
   An easy to use interface to generate authorization requests and use APIs.
 * **Verida GitHub**:\
-  [https://github.com/verida/](https://github.com/verida/)\
+  [https://github.com/verida](https://github.com/verida/)\
   Explore sample applications and open-source libraries.
 
 ***

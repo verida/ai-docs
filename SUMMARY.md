@@ -10,6 +10,7 @@
 * [API Requests](getting-started/api-requests.md)
 * [Connectors](getting-started/connectors/README.md)
   * [Build a Connector](getting-started/connectors/build-a-connector.md)
+  * [Telegram](getting-started/connectors/telegram.md)
 * [Example Apps](getting-started/example-apps.md)
 
 ## Data APIs
@@ -20,6 +21,7 @@
 * [Search](data-apis/search.md)
 * [AI Prompts](data-apis/ai-prompts.md)
 * [Actions](data-apis/actions.md)
+* [Data examples](data-apis/data-examples.md)
 * [API Reference](data-apis/api-reference.md)
 
 ## Integrations
@@ -30,7 +32,8 @@
 
 ## Resources
 
-* [Tutorials](resources/tutorials.md)
+* [Tutorials](resources/tutorials/README.md)
+  * [Accessing User Data (Telegram)](resources/tutorials/accessing-user-data-telegram.md)
 * [Learn](resources/learn/README.md)
   * [Anatomy of an AI Agent](resources/learn/anatomy-of-an-ai-agent.md)
   * [Dynamic Loading of Data for Realtime AI](resources/learn/dynamic-loading-of-data-for-realtime-ai.md)

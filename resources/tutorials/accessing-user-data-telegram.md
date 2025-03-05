@@ -2,6 +2,8 @@
 
 This tutorial will walk through how to use Verida API's to access user data, with a focus on accessing Telegram data.
 
+{% embed url="https://youtu.be/jPzSWLMVN_4" %}
+
 ### Getting started
 
 If you haven't already, register a Verida Account, sign into the [developer-console.md](../../getting-started/developer-console.md "mention") and obtain an Auth token so you can make API requests.

@@ -1,9 +1,13 @@
 ---
-description: Learn how to get started with the Verida AI developer console
 icon: square-terminal
+description: Learn how to get started with the Verida AI developer console
 ---
 
 # Developer Console
+
+
+
+{% embed url="https://youtu.be/auPfTQdUfRk" %}
 
 The Verida AI [Developer Console](https://admin.verida.ai/) is the central hub for managing your Verida developer account, monitoring your application usage, and interacting with our API ecosystem. This guide will walk you through the key capabilities and features of the console, empowering you to build, test, and deploy applications using the Verida platform.
 

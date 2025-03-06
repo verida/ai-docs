@@ -17,7 +17,7 @@ Verida’s **LLM APIs** enable your application to run **Large Language Model** 
 #### Example Usage
 
 ```bash
-curl -X POST "https://user-apis.verida.network/llm/prompt" \
+curl -X POST "https://api.verida.ai/api/rest/v1/llm/prompt" \
      -H "Authorization: Bearer YOUR_AUTH_TOKEN" \
      -H "Content-Type: application/json" \
      -d '{
@@ -47,7 +47,7 @@ For full request/response structures and parameters, see the\
 #### Example Usage
 
 ```bash
-curl -X POST "https://user-apis.verida.network/llm/agent-prompt" \
+curl -X POST "https://api.verida.ai/api/rest/v1/llm/agent-prompt" \
      -H "Authorization: Bearer YOUR_AUTH_TOKEN" \
      -H "Content-Type: application/json" \
      -d '{
@@ -83,7 +83,7 @@ For more advanced usage and available parameters, consult the\
 #### Example Usage
 
 ```bash
-curl -X POST "https://user-apis.verida.network/llm/profile-prompt" \
+curl -X POST "https://api.verida.ai/api/rest/v1/llm/profile-prompt" \
      -H "Authorization: Bearer YOUR_AUTH_TOKEN" \
      -H "Content-Type: application/json" \
      -d '{

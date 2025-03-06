@@ -21,6 +21,7 @@
 * [Search](data-apis/search.md)
 * [AI Prompts](data-apis/ai-prompts.md)
 * [Actions](data-apis/actions.md)
+* [Other Endpoints](data-apis/other-endpoints.md)
 * [Data examples](data-apis/data-examples.md)
 * [API Reference](data-apis/api-reference.md)
 

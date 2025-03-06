@@ -17,7 +17,7 @@ Verida’s **Search** APIs let you perform powerful keyword-based searches acros
 *   **Example**:
 
     ```bash
-    bashCopycurl -X GET "https://user-apis.verida.network/search/chat-threads?keywords=urgent" \
+    curl -X GET "https://api.verida.ai/api/rest/v1/search/chat-threads?keywords=urgent" \
          -H "Authorization: Bearer YOUR_AUTH_TOKEN"
     ```
 * **Full Documentation**:\
@@ -34,8 +34,8 @@ Verida’s **Search** APIs let you perform powerful keyword-based searches acros
 *   **Example**:
 
     ```bash
-    bashCopy# Using GET
-    curl -X GET "https://user-apis.verida.network/search/ds?keywords=invoice&datastore=social-email" \
+    # Using GET
+    curl -X GET "https://api.verida.ai/api/rest/v1/search/ds?keywords=invoice&datastore=social-email" \
          -H "Authorization: Bearer YOUR_AUTH_TOKEN"
     ```
 * **Full Documentation**:\
@@ -52,7 +52,7 @@ Verida’s **Search** APIs let you perform powerful keyword-based searches acros
 *   **Example**:
 
     ```bash
-    bashCopycurl -X GET "https://user-apis.verida.network/search/universal?keywords=meeting+agenda" \
+    curl -X GET "https://api.verida.ai/api/rest/v1/search/universal?keywords=meeting+agenda" \
          -H "Authorization: Bearer YOUR_AUTH_TOKEN"
     ```
 * **Full Documentation**:\

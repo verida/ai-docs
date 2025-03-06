@@ -15,6 +15,7 @@ For full technical details, consult the [Verida API Reference Documentation](htt
    * Create a Record (`api:ds-create`)
    * Update a Record (`api:ds-update`)
    * Query a Datastore (`api:ds-query`)
+   * Count records (`api:ds-query`)
    * Watch a Datastore (`api:ds-query`)
    * Delete a Record (`api:ds-delete`)
 2. **Databases**
@@ -22,6 +23,7 @@ For full technical details, consult the [Verida API Reference Documentation](htt
    * Create a Record (`api:db-create`)
    * Update a Record (`api:db-update`)
    * Query a Database (`api:db-query`)
+   * Count records (`api:db-query`)
 
 ***
 
@@ -39,11 +41,10 @@ Datastores are **schema-based collections** of structured data. Endpoints for da
 
     ```bash
     # dsUrlEncoded is typically the base64-encoded schema URL or a known shortcut
-    curl -X GET "https://user-apis.verida.network/ds/aHR0cHM6Ly9....json/456" \
+    curl -X GET "https://api.verida.ai/api/rest/v1/ds/aHR0cHM6Ly9....json/456" \
          -H "Authorization: Bearer YOUR_AUTH_TOKEN"
     ```
-* **Full Documentation**:\
-  [Datastore: Get Record by ID](https://user-apis.verida.network/#1664829f-ca3a-4b06-ad0a-bafff48b9495)
+* **Full Documentation**: [Datastore: Get Record by ID](https://user-apis.verida.network/#1664829f-ca3a-4b06-ad0a-bafff48b9495)
 
 ***
 
@@ -56,7 +57,7 @@ Datastores are **schema-based collections** of structured data. Endpoints for da
 *   **Example**:
 
     ```bash
-    curl -X POST "https://user-apis.verida.network/ds/aHR0cHM6Ly9.../" \
+    curl -X POST "https://api.verida.ai/api/rest/v1/ds/aHR0cHM6Ly9.../" \
          -H "Authorization: Bearer YOUR_AUTH_TOKEN" \
          -H "Content-Type: application/json" \
          -d '{
@@ -64,8 +65,7 @@ Datastores are **schema-based collections** of structured data. Endpoints for da
            "createdAt": "2025-02-03T12:00:00Z"
          }'
     ```
-* **Full Documentation**:\
-  [Datastore: Create Record](https://user-apis.verida.network/#7b5b2ebf-6270-4807-8c37-fb9cfe31b946)
+* **Full Documentation**: [Datastore: Create Record](https://user-apis.verida.network/#7b5b2ebf-6270-4807-8c37-fb9cfe31b946)
 
 ***
 
@@ -78,15 +78,14 @@ Datastores are **schema-based collections** of structured data. Endpoints for da
 *   **Example**:
 
     ```bash
-    curl -X PUT "https://user-apis.verida.network/ds/aHR0cHM6Ly9.../456" \
+    curl -X PUT "https://api.verida.ai/api/rest/v1/ds/aHR0cHM6Ly9.../456" \
          -H "Authorization: Bearer YOUR_AUTH_TOKEN" \
          -H "Content-Type: application/json" \
          -d '{
            "updatedKey": "newValue"
          }'
     ```
-* **Full Documentation**:\
-  [Datastore: Update Record](https://user-apis.verida.network/#847bdc5f-0009-4848-a4df-b91da8d97726)
+* **Full Documentation**: [Datastore: Update Record](https://user-apis.verida.network/#847bdc5f-0009-4848-a4df-b91da8d97726)
 
 ***
 
@@ -99,30 +98,48 @@ Datastores are **schema-based collections** of structured data. Endpoints for da
 *   **Example** (Query):
 
     ```bash
-    curl -X POST "https://user-apis.verida.network/ds/query/aHR0cHM6Ly9..." \
+    curl -X POST "https://api.verida.ai/api/rest/v1/ds/query/aHR0cHM6Ly9..." \
          -H "Authorization: Bearer YOUR_AUTH_TOKEN" \
          -H "Content-Type: application/json" \
          -d '{
            "filters": { "key": "value" }
          }'
     ```
-* **Full Documentation**:\
-  [Datastore: Query](https://user-apis.verida.network/#499008b7-333a-4e61-bb86-1f96e6eda966)
+* **Full Documentation**: [Datastore: Query](https://user-apis.verida.network/#499008b7-333a-4e61-bb86-1f96e6eda966)
 
 ***
 
-#### 5. Query a Datastore
+#### 5. Count records in a Datastore
+
+* **HTTP Method & Endpoint**: `POST /ds/count/{dsUrlEncoded}`
+* **Summary**: Count the number of results in a datastore that match a query
+* **Credit Usage**: **0 credits**
+* **Scope:** `api:ds-query`
+*   **Example** (Query):
+
+    ```bash
+    curl -X POST "https://api.verida.ai/api/rest/v1/ds/count/aHR0cHM6Ly9..." \
+         -H "Authorization: Bearer YOUR_AUTH_TOKEN" \
+         -H "Content-Type: application/json" \
+         -d '{
+           "filters": { "key": "value" }
+         }'
+    ```
+* **Full Documentation**: [Datastore Count](https://user-apis.verida.network/#33acf33c-506f-45a4-a776-4e8167ed62a1)
+
+***
+
+#### 6. Watch a Datastore
 
 * **HTTP Method & Endpoint**: `GET /ds/watch/{dsUrlEncoded}`
 * **Summary**: Subscribe to **real-time updates** from a datastore. This is not a typical HTTP request, it uses _EventSource_ to stream the database changes.
 * **Credit Usage**: **1 credit**
 * **Scope:** `api:ds-query`
-* **Full Documentation**:\
-  [Datastore: Watch](https://user-apis.verida.network/#801cdf87-30f2-4dbb-ac84-e18d9d1ab3df)
+* **Full Documentation**: [Datastore: Watch](https://user-apis.verida.network/#801cdf87-30f2-4dbb-ac84-e18d9d1ab3df)
 
 ***
 
-#### 6. Delete a Record
+#### 7. Delete a Record
 
 * **HTTP Method & Endpoint**: `DELETE /ds/{dsUrlEncoded}/{id}`
 * **Summary**: Remove a record permanently from a datastore.
@@ -131,7 +148,7 @@ Datastores are **schema-based collections** of structured data. Endpoints for da
 *   **Example**:
 
     ```bash
-    curl -X DELETE "https://user-apis.verida.network/ds/aHR0cHM6Ly9.../456" \
+    curl -X DELETE "https://api.verida.ai/api/rest/v1/ds/aHR0cHM6Ly9.../456" \
          -H "Authorization: Bearer YOUR_AUTH_TOKEN"
     ```
 
@@ -150,11 +167,10 @@ Database endpoints allow you to work with **traditional, table-like data**. Each
 *   **Example**:
 
     ```bash
-    curl -X GET "https://user-apis.verida.network/db/myDatabase/123" \
+    curl -X GET "https://api.verida.ai/api/rest/v1/db/myDatabase/123" \
          -H "Authorization: Bearer YOUR_AUTH_TOKEN"
     ```
-* **Full Documentation**:\
-  [Database: Get Record by ID](https://user-apis.verida.network/#e4408ed9-1e13-495b-810b-4b4ded8f3eb0)
+* **Full Documentation**: [Database: Get Record by ID](https://user-apis.verida.network/#e4408ed9-1e13-495b-810b-4b4ded8f3eb0)
 
 ***
 
@@ -167,7 +183,7 @@ Database endpoints allow you to work with **traditional, table-like data**. Each
 *   **Example**:
 
     ```bash
-    curl -X POST "https://user-apis.verida.network/db/myDatabase" \
+    curl -X POST "https://api.verida.ai/api/rest/v1/db/myDatabase" \
          -H "Authorization: Bearer YOUR_AUTH_TOKEN" \
          -H "Content-Type: application/json" \
          -d '{
@@ -187,7 +203,7 @@ Database endpoints allow you to work with **traditional, table-like data**. Each
 *   **Example**:
 
     ```bash
-    curl -X PUT "https://user-apis.verida.network/db/myDatabase/123" \
+    curl -X PUT "https://api.verida.ai/api/rest/v1/db/myDatabase/123" \
          -H "Authorization: Bearer YOUR_AUTH_TOKEN" \
          -H "Content-Type: application/json" \
          -d '{
@@ -207,7 +223,7 @@ Database endpoints allow you to work with **traditional, table-like data**. Each
 *   **Example**:
 
     ```bash
-    curl -X POST "https://user-apis.verida.network/db/query/myDatabase" \
+    curl -X POST "https://api.verida.ai/api/rest/v1/db/query/myDatabase" \
          -H "Authorization: Bearer YOUR_AUTH_TOKEN" \
          -H "Content-Type: application/json" \
          -d '{
@@ -215,8 +231,28 @@ Database endpoints allow you to work with **traditional, table-like data**. Each
            "limit": 10
          }'
     ```
-* **Full Documentation**:\
-  [Database: Query](https://user-apis.verida.network/#934196b1-7136-4f27-a593-0750bcfe6fa9)
+* **Full Documentation**: [Database: Query](https://user-apis.verida.network/#934196b1-7136-4f27-a593-0750bcfe6fa9)
+
+***
+
+#### 5. Count records in a Database
+
+* **HTTP Method & Endpoint**: `POST /db/count/{dbName}`
+* **Summary**: Count the number of results in a database that match a query
+* **Credit Usage**: **0 credits**
+* **Scope:** `api:db-query`
+*   **Example**:
+
+    ```bash
+    curl -X POST "https://api.verida.ai/api/rest/v1/db/count/myDatabase" \
+         -H "Authorization: Bearer YOUR_AUTH_TOKEN" \
+         -H "Content-Type: application/json" \
+         -d '{
+           "filters": { "status": "active" },
+           "limit": 10
+         }'
+    ```
+* **Full Documentation**: [Database: Query](https://user-apis.verida.network/#934196b1-7136-4f27-a593-0750bcfe6fa9)
 
 ***
 

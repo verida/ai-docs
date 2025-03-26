@@ -18,6 +18,10 @@ Verida PersonalAgentKit supported the following tools:
 6. **Universal Search** — Allow the LLM to perform a keyword search across all your data (ie: Find all mentions of "devcon 2025" in all my messages, emails and favourites)
 7. **User Information** — Allow the LLM to know more about the user account (DID) on the Verida network and what data permissions it can access.
 
+{% hint style="info" %}
+When the tools make requests to access user data, that data is queried within the Verida confidential compute environment (see [privacy-and-security.md](../resources/privacy-and-security.md "mention")). Due to the enhanced privacy model, there are currently performance considerations (see [api-performance.md](../data-apis/api-performance.md "mention")).
+{% endhint %}
+
 ## Which LLM to use?
 
 Not all LLM's are created equal. When you use these tools, the LLM must be capable of understanding the tool description and parameters to correctly call the tools in a useful way to respond to a user's prompt.
@@ -30,14 +34,26 @@ Here is what we have learned about leading LLM's to date:
 
 ### LLM Provider QuickLinks
 
+The following LLM providers support the OpenAI API format, so can be easily used with the OpenAI LangGraph plugin.
+
 1. [Get an OpenAI API key](https://platform.openai.com/docs/quickstart#create-and-export-an-api-key)
 2. [Get a RedPill AI key](https://red-pill.ai/) (Highly secure, runs Llama 3.3-70B in a TEE, slow)
 3. [Get an Anthropic key](https://www.anthropic.com/) (for Claude)
 4. [Get a Groq key](https://groq.com/) (Groq is fast)
 
+### LLM Context Length Notes
+
+{% hint style="success" %}
+We recommend using LLM's with large context lengths for best results.
+{% endhint %}
+
+LLM's have different context lengths that limit how much user data can be sent to them for processing. The current suite of tools don't provide any limitations on the length of user data that is sent to the LLM, so in some instances the LLM will throw an error saying the context limit size was reached.
+
+A future enhancement would be to provide a configurable character limit for the user data tool responses. We accept PR's! :)
+
 ### LLM Privacy Considerations
 
-{% hint style="warning" %}
+{% hint style="danger" %}
 Centralized LLM services (OpenAI, Anthropic, Groq etc.) can access your prompts and any data sent to them.
 {% endhint %}
 

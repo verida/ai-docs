@@ -62,7 +62,7 @@ Telegram populates two data schemas:
 * Social Chat Group ([view data schema](https://common.schemas.verida.io/social/chat/group/v0.1.0/schema.json))
 * Social Chat Message ([view data schema](https://common.schemas.verida.io/social/chat/message/v0.1.0/schema.json))
 
-We need to query these schemas using the [#id-4.-query-a-datastore](../../data-apis/queries.md#id-4.-query-a-datastore "mention") API endpoint.
+We need to query these schemas using the [#id-4.-query-a-datastore](../../data-apis/api-endpoints/queries.md#id-4.-query-a-datastore "mention") API endpoint.
 
 ### List the user's Telegram groups
 

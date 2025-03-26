@@ -25,11 +25,13 @@
 
 * [Overview](data-apis/overview.md)
 * [Data Types](data-apis/data-types.md)
-* [Queries](data-apis/queries.md)
-* [Search](data-apis/search.md)
-* [AI Prompts](data-apis/ai-prompts.md)
-* [Actions](data-apis/actions.md)
-* [Other Endpoints](data-apis/other-endpoints.md)
+* [API Endpoints](data-apis/api-endpoints/README.md)
+  * [Queries](data-apis/api-endpoints/queries.md)
+  * [Search](data-apis/api-endpoints/search.md)
+  * [AI Prompts](data-apis/api-endpoints/ai-prompts.md)
+  * [Actions](data-apis/api-endpoints/actions.md)
+  * [Other Endpoints](data-apis/api-endpoints/other-endpoints.md)
+* [API Performance](data-apis/api-performance.md)
 * [Data examples](data-apis/data-examples.md)
 * [API Reference](data-apis/api-reference.md)
 

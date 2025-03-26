@@ -21,7 +21,7 @@ The supported tools include:
 
 You can try this out for yourself via the [Command Line Chat Bot](https://github.com/verida/personal-agent-kit/tree/main/typescript/examples/chatbot).
 
-## Which LLM's to use?
+## Which LLM to use?
 
 Not all LLM's are created equal. When you use these tools, the LLM must be capable of understanding the tool description and parameters to correctly call the tools in a useful way to respond to a user's prompt.
 
@@ -29,9 +29,16 @@ Here is what we have learned about leading LLM's to date:
 
 1. _**Llama 3.3-70B**_ — Recommended. Works well. Open source.
 2. **Claude Haiku 3.5** — Recommended. Works very well.
-3. _**OpenAI (gpt-4)**_ — Not recommended. It fails to leverage the `selector` and `sort` parameters from the Query tool for no obvious reason.
+3. _**OpenAI (gpt-4o-mini, gpt-4o)**_ — Not recommended. It fails to leverage the `selector` and `sort` parameters from the Query tool for no obvious reason.&#x20;
 
-## Privacy considerations
+### LLM Provider QuickLinks
+
+1. [Get an OpenAI API key](https://platform.openai.com/docs/quickstart#create-and-export-an-api-key)
+2. [Get a RedPill AI key](https://red-pill.ai/) (Highly secure, runs Llama 3.3-70B in a TEE, slow)
+3. [Get an Anthropic key](https://www.anthropic.com/) (for Claude)
+4. [Get a Groq key](https://groq.com/) (Groq is fast)
+
+### LLM Privacy Considerations
 
 {% hint style="warning" %}
 Centralized LLM services (OpenAI, Anthropic, Groq etc.) can access your prompts and any data sent to them.
@@ -43,7 +50,7 @@ When you connect a LLM to the Verida API's, the LLM can't access all the user da
 
 This is very important to understand, because you are trusting these centralized LLM services to not expose your prompts or data sent to their LLM's. These could be exposed by malicious employees or as a result of a third party hack on that service.
 
-### How to secure your LLM requests
+### How to Secure your LLM Requests
 
 There are two key ways you can eliminate the security risks associated with centralized LLM services:
 

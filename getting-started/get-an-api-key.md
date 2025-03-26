@@ -12,7 +12,7 @@ There are currently three ways to obtain an API key to use the Verida APIs:
 3. Request a key from a user of your application
 
 {% hint style="info" %}
-Note: To generate your own key, you will need to first Install the [Verida Wallet](https://www.verida.network/verida-wallet) mobile application to create your own self-custody account to store your data and connect some data sources to your account with the [verida-vault.md](../resources/verida-vault.md "mention").
+Note: To generate your own key, you will need to first [create a self-custody Verida Account](developer-console.md#creating-your-verida-account).
 {% endhint %}
 
 ## Generate your own key with the Verida Vault

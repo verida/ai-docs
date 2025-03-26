@@ -1,4 +1,5 @@
 ---
+description: Get started with the Verida AI API's and LLM tools
 icon: cloud-check
 ---
 
@@ -21,9 +22,11 @@ Here, you’ll find everything you need to integrate Verida’s decentralized da
 ### Getting Started
 
 1. [**Developer Console**](https://admin.verida.ai/): Open the developer console, an easy to use interface to generate authorization requests and use APIs.
-2. **Check Your Scopes**: Decide which data or APIs your application needs access to, and request only the necessary scopes.
+2. [**Check Your Scopes**](getting-started/scopes.md): Decide which data or APIs your application needs access to, and request only the necessary scopes.
 3. **Implement Authentication**: Set up a "Connect Verida" button in your application so users can grant you the required permissions.
-4. **Use the APIs**: Make calls to the Verida User APIs, providing your valid `auth_token` in the `Authorization` header.
+4. **Integrate with your application:**
+   1. [**Use LangGraph tools**](integrations/langgraph.md): Quickly expand the capabilities of your LLM with our pre-built LangGraph tools that can access all available user data.
+   2. [**Use the APIs**](data-apis/overview.md): Make calls to the Verida User APIs with a valud user `auth_token` .
 5. [**Explore Examples**](getting-started/example-apps.md): Head to our code samples and tutorials to see best practices in action.
 
 ### Need Help?

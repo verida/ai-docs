@@ -18,5 +18,11 @@ A very simple jQuery and Bootstrap application that requests an auth token from 
 
 **Source code:** [https://github.com/verida/app-connect-example](https://github.com/verida/app-connect-example)
 
+### 3. Command Line Chatbot
+
+A simple command line chat bot that uses the PersonalAgentKit langchain tools.
+
+**Source code:** [https://github.com/verida/personal-agent-kit/blob/main/typescript/examples/chatbot/README.md](https://github.com/verida/personal-agent-kit/blob/main/typescript/examples/chatbot/README.md)
+
 
 

@@ -5,6 +5,7 @@
 ## Getting Started
 
 * [Developer Console](getting-started/developer-console.md)
+* [Get an API key](getting-started/get-an-api-key.md)
 * [Authentication](getting-started/authentication.md)
 * [Scopes](getting-started/scopes.md)
 * [API Requests](getting-started/api-requests.md)
@@ -12,6 +13,12 @@
   * [Build a Connector](getting-started/connectors/build-a-connector.md)
   * [Telegram](getting-started/connectors/telegram.md)
 * [Example Apps](getting-started/example-apps.md)
+
+## Integrations
+
+* [LangGraph](integrations/langgraph.md)
+* [NEAR Protocol](integrations/near-protocol.md)
+* [Nillion Network](integrations/nillion-network.md)
 
 ## Data APIs
 
@@ -24,12 +31,6 @@
 * [Other Endpoints](data-apis/other-endpoints.md)
 * [Data examples](data-apis/data-examples.md)
 * [API Reference](data-apis/api-reference.md)
-
-## Integrations
-
-* [LangChain](integrations/langchain.md)
-* [NEAR Protocol](integrations/near-protocol.md)
-* [Nillion Network](integrations/nillion-network.md)
 
 ## Resources
 

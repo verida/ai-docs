@@ -16,6 +16,7 @@
 
 ## Integrations
 
+* [Overview](integrations/overview.md)
 * [LangGraph](integrations/langgraph.md)
 * [NEAR Protocol](integrations/near-protocol.md)
 * [Nillion Network](integrations/nillion-network.md)

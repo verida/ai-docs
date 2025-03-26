@@ -19,7 +19,15 @@ The supported tools include:
 6. **Universal Search** — Allow the LLM to perform a keyword search across all your data (ie: Find all mentions of "devcon 2025" in all my messages, emails and favourites)
 7. **User Information** — Allow the LLM to know more about the user account (DID) on the Verida network and what data permissions it can access.
 
-You can try this out for yourself via the [Command Line Chat Bot](https://github.com/verida/personal-agent-kit/tree/main/typescript/examples/chatbot).
+## Getting Started
+
+You can locally run the [Command Line Chat Bot](https://github.com/verida/personal-agent-kit/tree/main/typescript/examples/chatbot) to access your data stored in your [verida-vault.md](../resources/verida-vault.md "mention") to experiment and learn what is possible.
+
+You can integrate these tools into your existing LangGraph / LangChain project, see the [README file for the LangGraph typescript tools library](https://github.com/verida/personal-agent-kit/blob/main/typescript/extensions/langchain/README.md) for example code snippets and instructions.
+
+{% hint style="info" %}
+We currently only support typescript, but will gladly award a [grant](../resources/grants.md) to anyone who implements a Python library.
+{% endhint %}
 
 ## Which LLM to use?
 

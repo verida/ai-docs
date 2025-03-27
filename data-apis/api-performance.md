@@ -22,7 +22,7 @@ A simple query such as "how many emails have I sent" requires the following step
 5. Query all the user data with a filter to only find emails I have sent \[seconds]
 6. Return the result \[milliseconds]
 
-The confidential compute environment implements caching (see below), so the above steps 2-4 are only required on the first request that&#x20;
+The confidential compute environment implements caching (see below), so the above steps 2-4 are only required on the first request.
 
 ## Caching to increase performance
 

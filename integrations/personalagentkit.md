@@ -1,8 +1,9 @@
 ---
+description: Learn about the Verida PersonalAgentKit
 icon: webhook
 ---
 
-# Overview
+# PersonalAgentKit
 
 The Verida [PersonalAgentKit](https://github.com/verida/personal-agent-kit/) provides integrations with AI frameworks for simple integration into your applications.
 

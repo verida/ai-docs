@@ -5,6 +5,12 @@ icon: chart-simple
 
 # LangGraph
 
+
+
+{% embed url="https://www.youtube.com/watch?v=_ZiQ-3p93PM" %}
+Chatbot example using Verida PersonalAgentKit with Langchain
+{% endembed %}
+
 Our first release supports typescript LangGraph tools to easily integrate with any LangChain / LangGraph application.
 
 You can locally run the [Command Line Chat Bot](https://github.com/verida/personal-agent-kit/tree/main/typescript/examples/chatbot) to access your data stored in your [verida-vault.md](../resources/verida-vault.md "mention") to experiment and learn what is possible.

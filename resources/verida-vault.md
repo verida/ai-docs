@@ -13,7 +13,7 @@ The [Verida Vault](https://app.verida.ai/) provides an easy web interface for us
 
 Users can pull their personal data from platforms such as Meta, Google, X, Email, LinkedIn, Strava, and much more. This data is encrypted and stored in a user-controlled personal data Vault on the Verida network.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-10-01 at 2.45.48 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-10-01 at 2.45.48 PM.png" alt=""><figcaption><p>Syncronize data from the applications you use</p></figcaption></figure>
 
 The Vault provides also provide a universal search connected to the user's data; enabling easy search across emails, message history, documents and more.
 

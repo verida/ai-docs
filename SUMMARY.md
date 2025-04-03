@@ -4,6 +4,7 @@
 
 ## Getting Started
 
+* [How it works](getting-started/how-it-works.md)
 * [Developer Console](getting-started/developer-console.md)
 * [Get an API key](getting-started/get-an-api-key.md)
 * [Authentication](getting-started/authentication.md)

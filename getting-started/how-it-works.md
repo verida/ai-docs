@@ -5,7 +5,7 @@ icon: graduation-cap
 
 # How it works
 
-Verida AI allows users to easily and quickly connect their private data from other applications into your application or AI product.
+Verida AI allows users to easily and quickly connect their private data from other applications into your application or AI product. Once integrated, your AI application can access a user's Gmail, Calendar, Drive, Telegram and much more.
 
 <figure><img src="../.gitbook/assets/How-VeridaAI-Works.png" alt=""><figcaption><p>The steps for users to connect their data to your application</p></figcaption></figure>
 

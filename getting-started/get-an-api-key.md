@@ -29,6 +29,6 @@ You can generate your own private API key from the [developer-console.md](develo
 
 ## Request a key from a user of your application
 
-If you are building an application, you can request a key directly from the user by embedding a `Connect Verida` button into your application with pre-configured scopes to request.
+If you are building an application, you can request a key directly from the user by embedding a `Connect Verida` button into your application with pre-configured scopes to request from a user.
 
 See the [developer-console.md](developer-console.md "mention") and [authentication.md](authentication.md "mention") sections of the documentation to learn more.

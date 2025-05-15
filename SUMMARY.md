@@ -8,6 +8,7 @@
 * [Developer Console](getting-started/developer-console.md)
 * [Get an API key](getting-started/get-an-api-key.md)
 * [Authentication](getting-started/authentication.md)
+* [Authentication \[old\]](getting-started/authentication-old.md)
 * [Scopes](getting-started/scopes.md)
 * [API Requests](getting-started/api-requests.md)
 * [Connectors](getting-started/connectors/README.md)

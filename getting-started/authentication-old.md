@@ -1,9 +1,10 @@
 ---
 description: Learn how to generate an authentication token to access user data
+hidden: true
 icon: lock-keyhole
 ---
 
-# Authentication
+# Authentication \[old]
 
 This guide explains how to authenticate users in your application to obtain an `auth_token`, and make API requests to Verida’s services.
 
@@ -28,7 +29,6 @@ Below is a typical flow when integrating your application with Verida AI:
 
 1. **Generate an authentication request URL**
    * Include the scopes you require as well as the `redirectUrl` for successful authentication.
-   * The easiest way to generate an authentication URL is via the [#developer-sandbox](developer-console.md#developer-sandbox "mention") and then edit the `redirectUrl`
 2. **Redirect the user to the authentication request URL**
    * The user is prompted to grant or deny your application access.
 3. **User grants access and is redirected back**
@@ -40,19 +40,56 @@ Below is a typical flow when integrating your application with Verida AI:
 
 ***
 
+### Generate an Authentication Request URL
+
+To start the authentication process, build a URL that directs users to Verida’s authentication endpoint. This URL must include several query parameters:
+
+* **`redirectUrl`**: The URL in your application that handles a successful user authentication.
+* **`scopes`**: An array of scopes that your application requires. The latest valid scopes can be listed via the [Scopes API](https://api.verida.ai/api/rest/v1/auth/scopes).
+* **`payer`**: Specifies who will pay for the API requests made with this auth token. Set this to either `user` or `app`.
+
+Below is an example authentication request URL (URL-encoded) that includes three scopes:
+
+```
+https://api.verida.ai/api/rest/v1/auth/auth?scopes=api%3Ads-query&scopes=api%3Allm-agent-prompt&scopes=api%3Allm-profile-prompt&redirectUrl=http%3A%2F%2Flocalhost%3A8080%2F
+```
+
+#### TypeScript Example
+
+```ts
+// Build authentication URL
+const AUTH_ENDPOINT = "https://api.verida.ai/api/rest/v1/auth/auth";
+const authLink = new URL(AUTH_ENDPOINT);
+
+// Add scopes
+authLink.searchParams.append("scopes", "api:ds-query");
+authLink.searchParams.append("scopes", "api:llm-agent-prompt");
+
+// Add your application URL
+authLink.searchParams.append("redirectUrl", "https://yourapplication.com/auth-success");
+
+// Application will pay for API requests
+authLink.searchParams.append("payer", "app");
+
+// Redirect user to start the authorization process
+window.location.href = authLink.toString();
+```
+
+***
+
 ### Display the Verida Connect Button
 
-You can embed a **Connect** button in your UI with the authentication URL as the link. When clicked, it sends users to the Verida authentication flow.
+Instead of automatically redirecting, you can provide a **Connect** button in your UI. When clicked, it sends users to the Verida authentication flow.
 
 <figure><img src="https://assets.verida.io/auth/Connect-Verida.png" alt=""><figcaption></figcaption></figure>
 
 ```html
-<a href="${authenticationURL}" id="connectButton" class="verida-connect">
+<a href="${authLink}" id="connectButton" class="verida-connect">
   <img src="https://assets.verida.io/auth/Connect-Verida.png" />
 </a>
 ```
 
-Replace `${`authenticationURL`}` with the URL generated in the previous step.
+Replace `${authLink}` with the URL generated in the previous step.
 
 ***
 
